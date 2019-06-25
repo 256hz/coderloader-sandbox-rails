@@ -14,13 +14,13 @@ Link.destroy_all
 User.destroy_all
 Github.destroy_all
 
-user = User.create!(first_name: 'Abe', last_name: 'Dolinger',
+user = User.create!(first_name: 'Sandbox', last_name: 'Portfolio',
     email:"a.d@256hz.com", phone: '2679685414',
-    username:"abed", password: "256hzfolio#",
-    title:"Full Stack Web Developer",
-    bio:'',
-    intro:'I\'m a product designer who switched from hardware to code.  Digital forever.',
-    img_url: '/images/abe-avataaars-glasses-circle-transparent.png',
+    username:"test", password: "test",
+    title:"Rails & React Demo Page",
+    bio:"I've dedicated myself to a life of learning and technical excellence. I self-taught and worked as a location film sound recordist for ten years, working on two Oscar-winning documentaries. During that time I created my own product (a sound accessory in 6 flavors, still sold in stores), and fell in love with product design. I learned CAD and manufacturing on the job, and coded on the side, which was even more fun than CAD. I graduate from the Full Stack Web Development Immersive program at Flatiron School in June 2019. My goal is to become a technical lead.",
+    intro:"I'm a product designer who switched from hardware to code.  Digital forever.",
+    img_url: 'https://cdn.dribbble.com/users/1169054/screenshots/2761050/stormtrooper.jpg',
     color_theme: 'theme-ice'
 )
 
