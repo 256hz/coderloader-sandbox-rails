@@ -14,133 +14,125 @@ Link.destroy_all
 User.destroy_all
 Github.destroy_all
 
-user = User.create!(first_name: 'Sandbox', last_name: 'Portfolio',
+user = User.create!(first_name: 'Abe', last_name: 'Dolinger',
     email:"a.d@256hz.com", phone: '2679685414',
-    username:"test", password: "test",
-    title:"Rails & React Demo Page",
-    bio:"I've dedicated myself to a life of learning and technical excellence. I self-taught and worked as a location film sound recordist for ten years, working on two Oscar-winning documentaries. During that time I created my own product (a sound accessory in 6 flavors, still sold in stores), and fell in love with product design. I learned CAD and manufacturing on the job, and coded on the side, which was even more fun than CAD. I graduate from the Full Stack Web Development Immersive program at Flatiron School in June 2019. My goal is to become a technical lead.",
-    intro:"I'm a product designer who switched from hardware to code.  Digital forever.",
-    img_url: 'https://cdn.dribbble.com/users/1169054/screenshots/2761050/stormtrooper.jpg',
+    username:"abed", password: ENV['CODERLOADER_PASSWORD'],
+    title:"Front End Dev / Product Designer",
+    bio:'Before coding, I was a hardware designer, startup founder, and sound engineer. In sound, I learned technical problem solving; in startups, I learned business logic. As a product designer, I learned creative problem solving from many perspectives: the user’s, the owner’s, and the manufacturer’s. Clear, concise communication was always paramount. Software design lets me combine all my experience, so moving to development was a no-brainer for me! I can finally make deep functionality feel light and effortless. I graduated from the Flatiron Full Stack Web Development program in June 2019, and my goal is to be a Technical Lead in the next 3-5 years.',
+    intro:'I\'m a hardware product designer who switched to code.  Digital forever.',
+    img_url: '/images/temp-avatar.png',
     color_theme: 'theme-ice'
 )
 
-job1 = Job.create!(
-    company: "Digital Pavilion Electronics", title: "Lead Product Engineer",
-    summary: "I lead a small product design department with wide-ranging capabilities.  We made everything from consumer audio electronics to grilling tools to wireless chargers.  Started as designer and left as lead.",
-    start_month: "Apr", start_year: 2016,
-    end_month: "Mar", end_year: 2019,
-    responsibilities:["CAD for manufacturing", "Market research / viability studies", "Professional product renders", "Prototyping (rapid/mechanical/photo finish)", "Packaging design", "Working with contract manufacturers and suppliers"],
-    skills_used:["Design thinking","Product development (directly with clients)","Product management","Prototyping", "CAD","Lab/systems design"],
-    img_url: 'http://www.thedigitalpavilion.com/skin/frontend/base/default/images/digital-pavilion.png',
+Job.create!(
+    company: "Example Company", title: "Code Monkey",
+    summary: "I was let loose on a bunch of typewriters, and by God, we wrote Midsummer Night's Dream.",
+    start_month: "Apr", start_year: 2018,
+    end_month: nil, end_year: nil,
+    responsibilities:["Bananas", "Monkey management", "Guard duty for shenanigans"],
+    skills_used:["Object-oriented design", "SOLID principles", "Agile methodology"],
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Feverestcollege.files.wordpress.com%2F2013%2F02%2F2_get-a-job-computer-key-5001294.jpg',
     order_id: 0, user_id: user.id
 )
-job2 = Job.create(
-    company: "Abetek", title: "Designer/Manufacturer",
-    summary: "I have two products: a battery caddy charging system and a microphone accessory for film. Both are sold online and in audio specialty stores.",
-    start_month: "Jul", start_year: 2014,
-    responsibilities:["Design","Branding","B2B Sales"],
-    skills_used:["Startup creation", "Bootstrapping - I 3D printed the first microphone accessories myself","Using industry connections to further reach"],
-    img_url: 'http://static1.squarespace.com/static/55c16371e4b0aa531a67cdf4/t/55e2014de4b00445ea1b6322/1498575463250/?format=1500w',
+Job.create(
+    company: "Another Example", title: "Minecraft Designer",
+    summary: "Believe it or not, I was hired by a wealthy guy to follow him around and kill creepers while he built mediocre structures.  Why he didn't just play on creative mode I'll never know.",
+    start_month: "Jul", start_year: 2016,
+    end_month: "Apr", end_year: 2018,
+    responsibilities:["Killing creepers","Mental health support","Hype man"],
+    skills_used:["Plink plonk", "Doop-de-doo", "Ding-dong"],
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PPBMLiYljuluJZtFxAZwDQHaHa%26pid%3DApi',
     order_id: 1, user_id: user.id
 )
-job3 = Job.create(
-    company: "Enjyn", title: "COO",
-    summary: "A crowdfunding platform for artists and musicians.  We launched not long after Kickstarter, and successfully raised funds for some artists, but Kickstarter won!  A great experience, and my first exposure to Rails.",
-    start_month: "Sep", start_year: 2009,
-    end_month: "Jun", end_year: 2011,
+Job.create(
+    company: "Tech Giant", title: "CEO",
+    summary: "I thought it would be cool to be the real leader of the free world, so I became the CEO of Giant Tech Co.  Lo and behold, we actually do run things around here.",
+    start_month: "Sep", start_year: 2014,
+    end_month: "Jul", end_year: 2016,
     responsibilities:["MVP Design","Business management"],
     skills_used:["Product design","Startup creation","Product management"],
-    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fvacord.com%2Fwp-content%2Fuploads%2F2016%2F04%2Fenjyn-large.jpg&f=1',
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.execunet.com%2Fm%2Fdart-job-search-target.jpg&f=1',
     order_id: 2, user_id: user.id
 )
-job4 = Job.create(
-    company: "Freelance", title: "Location Sound Recordist",
-    summary: "Worked with small teams on some big projects.  I am credited on two Oscar-winning documentaries (\"OJ - Made in America\", \"20 Feet From Stardom\"), and films that played at Sundance and Toronto.  I've recorded hundreds of projects: corporate, independent, advertising, TV, feature films, and more.",
-    start_month: "Aug", start_year: 2006,
-    end_month: "Apr", end_year: 2016,
-    responsibilities:["Own and operate a suite of high-end portable recording equipment", "Deliver excellent audio in often challenging environments", "Work seamlessly with small and large teams of different types", "Anticipate challenges before they arise with solutions in mind"],
-    skills_used:["Audio", "Communication", "Project planning"],
-    img_url: 'http://static1.squarespace.com/static/55c16371e4b0aa531a67cdf4/t/55e2014de4b00445ea1b6322/1498575463250/?format=1500w',
-    order_id: 3, user_id: user.id
-)
 
-Honor.create!(name: "MVP", 
-    summary: "I made like a lot of money",
-    month: "Feb", year: "2002",
+Skill.create!(name: "Product design",
+    img_url: "https://cdn0.iconfinder.com/data/icons/business-2-41/129/172-512.png",
     order_id: 0, user_id: user.id)
-Honor.create(name: "MVP2", 
-    summary: "I made like a lot of money",
-    month: "Dec", year: "2003",
+Skill.create(name: "React.js",
+    img_url: "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-512.png",
     order_id: 1, user_id: user.id)
-Honor.create(name: "MVP3", 
-    summary: "I made like a lot of money",
-    month: "Mar", year: "2004",
+Skill.create(name: "Semantic UI React",
+    img_url: "https://react.semantic-ui.com/logo.png",
     order_id: 2, user_id: user.id)
-
-
-Interest.create!(
-    name: "Music", summary: "This guy really knew how to screw people over",
-    order_id: 0, user_id: user.id)
-Interest.create(
-    name: "Acoustic guitar", summary: "I can play Wonderwall",
-    order_id: 1, user_id: user.id)
-Interest.create(
-    name: "Reddit", summary: "What a bunch of degenerates",
-    order_id: 2, user_id: user.id)
-
-
-link1 = Link.create!(
-    title: "Githerb", url: "https://www.github.com",
-    summary: "It's a site what u want from me",
-    order_id: 0, user_id: user.id)
-link2 = Link.create(
-    title: "The Internet", url: "https://www.google.com",
-    summary: "Advertising hell",
-    order_id: 1, user_id: user.id)
-link3 = Link.create(
-    title: "Ableton", url: "https://www.ableton.com/en/",
-    summary: "A website from a company from a time in a place where the sea never ends into an infinite expanse of merpeople and crystal gazing spheres of liquid thought",
-    order_id: 2, user_id: user.id)
-
-Skill.create!(name: "Product design", 
-    img_url: "https://cdn0.iconfinder.com/data/icons/business-2-41/129/172-512.png", 
-    order_id: 0, user_id: user.id)
-Skill.create(name: "React.js", 
-    img_url: "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-512.png", 
-    order_id: 1, user_id: user.id)
-Skill.create(name: "Semantic UI React", 
-    img_url: "https://react.semantic-ui.com/logo.png", 
-    order_id: 2, user_id: user.id)
-Skill.create(name: "Rails", 
-    img_url: "http://png-2.findicons.com/files/icons/1607/ruby_on_rails/512/ror_logo.png", 
+Skill.create(name: "Rails",
+    img_url: "http://png-2.findicons.com/files/icons/1607/ruby_on_rails/512/ror_logo.png",
     order_id: 3, user_id: user.id)
-Skill.create(name: "ES6 Javascript", 
-    img_url:"https://www.shareicon.net/data/512x512/2016/07/06/106573_software_512x512.png", 
+Skill.create(name: "ES6 Javascript",
+    img_url:"https://www.shareicon.net/data/512x512/2016/07/06/106573_software_512x512.png",
     order_id: 4, user_id: user.id)
-Skill.create(name: "Ruby", 
-    img_url: "https://image.flaticon.com/icons/png/512/919/919842.png", 
+Skill.create(name: "Ruby",
+    img_url: "https://image.flaticon.com/icons/png/512/919/919842.png",
     order_id: 5, user_id: user.id)
-Skill.create(name: "Python", 
-    img_url: "http://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-python-icon.png", 
+Skill.create(name: "Python",
+    img_url: "http://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-python-icon.png",
     order_id: 6, user_id: user.id)
 
-Github.create!(repo_owner: '256hz', repo_name: 'coderloader-react', 
-    img_url: 'https://www.emoji.co.uk/files/microsoft-emojis/symbols-windows10/10158-squared-cl.png',
-    summary: 'React.js frontend of portfolio generator/editor', 
-    contribution: 'JWT authorization, React-Router anchor tags, styling, Semantic gridding, component logic',
+Github.create!(repo_url_front: 'http://github.com/repo_front', name: 'your-repo-1',
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Favatars3.githubusercontent.com%2Fu%2F9585881%3Fs%3D400%26v%3D4&f=1',
+    summary: 'The best repo of all time',
+    contribution: ['JWT authorization', 'React-Router anchor tags', 'styling', 'Semantic gridding', 'component logic'],
     order_id: 0, user_id: user.id)
-Github.create(repo_owner: '256hz', repo_name: 'coderloader-rails', 
-    img_url: 'https://www.emoji.co.uk/files/microsoft-emojis/symbols-windows10/10158-squared-cl.png',
-    summary: 'Ruby on Rails backend of portfolio generator/editor', 
-    contribution: 'Initial setup of Postgres DB, API, and serializers, JWT, controller logic', 
+Github.create(repo_url_front: 'http://github.com/repo_front', name: 'your-repo-2',
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2Fa7%2Fe8%2Ffa%2Fa7e8fa149fb23e4cbcfe9e8406b6b911.jpg&f=1',
+    summary: 'The other best repo',
+    contribution: ['Initial setup of Postgres DB, API, and serializers', 'JWT', 'controller logic'],
     order_id: 1, user_id: user.id)
-Github.create(repo_owner: '256hz', repo_name: 'green-up-seattle', 
-    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fthatwasabitmental.files.wordpress.com%2F2014%2F07%2Ftroll-poster.jpg&f=1',
-    contribution: 'Leaderboard, automated DB seeding, ',
-    summary: 'React frontend of portfolio generator', 
+Github.create(repo_url_front: 'http://github.com/repo_front', name: 'your-repo-3',
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1978599420%2Felectrocat_400x400.png&f=1',
+    contribution: ['Leaderboard', 'automated DB seeding', 'auth'],
+    summary: 'OK, there are at least 3 best repos',
     order_id: 2, user_id: user.id)
-Github.create(repo_owner: 'ifmeorg', repo_name: 'ifme', 
-    img_url: 'https://avatars1.githubusercontent.com/u/23299450?s=200&v=4',
-    contribution: 'Styled a tooltip element',
-    summary: 'React frontend of portfolio generator', 
+Github.create(repo_url_front: 'http://github.com/repo_front', name: 'your-repo-4',
+    img_url: 'https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F31044959%3Fs%3D400%26v%3D4&f=1',
+    contribution: ['Chaos crystals'],
+    summary: 'A four-way tie for best repo I guess',
     order_id: 3, user_id: user.id)
+
+# These aren't implemented yet
+# Honor.create!(name: "MVP",
+#     summary: "I made like a lot of money",
+#     month: "Feb", year: "2002",
+#     order_id: 0, user_id: user.id)
+# Honor.create(name: "MVP2",
+#     summary: "I made like a lot of money",
+#     month: "Dec", year: "2003",
+#     order_id: 1, user_id: user.id)
+# Honor.create(name: "MVP3",
+#     summary: "I made like a lot of money",
+#     month: "Mar", year: "2004",
+#     order_id: 2, user_id: user.id)
+
+
+# Interest.create!(
+#     name: "Music", summary: "This guy really knew how to screw people over",
+#     order_id: 0, user_id: user.id)
+# Interest.create(
+#     name: "Acoustic guitar", summary: "I can play Wonderwall",
+#     order_id: 1, user_id: user.id)
+# Interest.create(
+#     name: "Reddit", summary: "What a bunch of degenerates",
+#     order_id: 2, user_id: user.id)
+
+
+# link1 = Link.create!(
+#     title: "Githerb", url: "https://www.github.com",
+#     summary: "It's a site what u want from me",
+#     order_id: 0, user_id: user.id)
+# link2 = Link.create(
+#     title: "The Internet", url: "https://www.google.com",
+#     summary: "Advertising hell",
+#     order_id: 1, user_id: user.id)
+# link3 = Link.create(
+#     title: "Ableton", url: "https://www.ableton.com/en/",
+#     summary: "A website from a company from a time in a place where the sea never ends into an infinite expanse of merpeople and crystal gazing spheres of liquid thought",
+#     order_id: 2, user_id: user.id)
