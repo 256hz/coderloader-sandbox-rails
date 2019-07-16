@@ -9,5 +9,4 @@ class GithubSerializer < ActiveModel::Serializer
     :summary, 
     :user_id,
     :contribution
-    
 end
